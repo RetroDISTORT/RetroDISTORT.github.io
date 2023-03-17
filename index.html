@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -13,159 +12,152 @@
   </head>
   <body style="overflow:hidden;" onload="openHome()">
       
-    <div class="frameWhite"></div>
-    <div class="border" style="top: 0%;    left: 0%;    width: 5%;   height: 100%;"></div>
-    <div class="border" style="top: 0%;    left: 95.9%; width: 5%;   height: 100%;"></div>
-    <div class="border" style="top: 0%;    left: 0%;    width: 100%; height: 5%;"></div>
-    <div class="border" style="top: 95.4%; left: 0%;    width: 100%; height: 5%;"></div>
-
-    <div id="Title" style="position: absolute; z-index: 4; top: 15%; left: 0%; width:100%; color: #CCC; font-size: 5vw; text-align: center;"> Welcome!</div>
-    
-    <div id="meshFrame" style="position:absolute; top:55%; left:50%;">
-      <div class="mesh" id="mesh" style="position:relative">
-	<div class="base"  style="transform: translateX(-50%) rotateY(0deg)   rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(45deg)  rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(90deg)  rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(135deg) rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(180deg) rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(225deg) rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(270deg) rotateX(-45deg) translateY(-50%);"></div>
-	<div class="base"  style="transform: translateX(-50%) rotateY(315deg) rotateX(-45deg) translateY(-50%);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(0deg)   translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(45deg)  translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(90deg)  translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(135deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(180deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(225deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(270deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="mid"   style="transform: translateX(-50%) rotateY(315deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
-	<div class="top"   style="transform: translateX(-50%) translateY(-150.25%) rotateX(90deg) rotateZ(23deg);"></div>
-      </div>
-    </div>
-    
-    <div style="position: relative; width: 90%; top: 6%; left:5%;">
-      <img src="static/images/logo_white.svg" style="position: relative; z-index: 4; float:left; width:3%; left:.5%;"/>
-      <div class="button" id="about"    onclick="openAbout();"    style="float:right; width: 10%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>about</span></div>
-      <div class="button" id="projects" onclick="openProjects();" style="float:right; width: 12%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>projects</span></div>
-      <div class="button" id="resume"   onclick="openResume();"  style="float:right; width: 11%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>resume</span></div>
-      <div class="button" id="home"     onclick="openHome();"     style="float:right; width: 8%;">  <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>home</span></div>
-    </div>
+    <div class="frameWhite" style="position:relative; z-index:100;">
+      <!-- <div class="border" style="top: 0%;    left: 0%;    width: 5%;   height: 100%;"></div> -->
+      <!-- <div class="border" style="top: 0%;    left: 95.9%; width: 5%;   height: 100%;"></div> -->
+      <!-- <div class="border" style="top: 0%;    left: 0%;    width: 100%; height: 5%;"></div> -->
+      <!-- <div class="border" style="top: 95.4%; left: 0%;    width: 100%; height: 5%;"></div> -->
       
-    <a class="social" href="https://github.com/RetroDISTORT"               style="bottom: 5%; left: 91%; width:4vw; height:4vw;"></a>
-    <a class="social" href="https://www.linkedin.com/in/daniel-garcia-rd/" style="bottom: 5%; left: 87%; width:4vw; height:4vw;"></a>
-    <a class="social" onclick="toClipboard('daniel95@rams.colostate.edu')" style="bottom: 5%; left: 82.5%; width:4vw; height:4vw;">✉</a>
-
-    <div class="info" id="info" style="visibility:hidden">
-      <!-- <div class="infoBackground"></div> -->
+      <div id="Title" style="position: absolute; z-index: 4; top: 15%; left: 0%; width:100%; color: #CCC; font-size: 5vw; text-align: center;"> Welcome!</div>
       
-      <div id="infoResume" scroll="yes" style="position:relative; z-index: 4; top:6.75%; left:10%; width:90%; max-height:85%; visibility:hidden; overflow:auto;">
-	<!-- https://www.zamzar.com/convert/pdf-to-svg/ -->
-	<a href="static/resume/resume.pdf" download="JoseDanielCarciaCarrilloResume" style="position:fixed; z-index: 4; top:13%; right:2.5%; width:20%; text-align: left; color:#EEE; font-size: 1.5vw;"> Download </a>
-	<img id="resumeFile"  src="static/resume/resume.svg"/>
+      <div id="meshFrame" style="position:absolute; top:55%; left:50%;">
+	<div class="mesh" id="mesh" style="position:relative">
+	  <div class="base"  style="transform: translateX(-50%) rotateY(0deg)   rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(45deg)  rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(90deg)  rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(135deg) rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(180deg) rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(225deg) rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(270deg) rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="base"  style="transform: translateX(-50%) rotateY(315deg) rotateX(-45deg) translateY(-50%);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(0deg)   translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(45deg)  translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(90deg)  translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(135deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(180deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(225deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(270deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="mid"   style="transform: translateX(-50%) rotateY(315deg) translateY(-121%) translateZ(150px) rotateX(45deg);"></div>
+	  <div class="top"   style="transform: translateX(-50%) translateY(-150.25%) rotateX(90deg) rotateZ(23deg);"></div>
+	</div>
       </div>
       
-      <div id="infoAbout">
+      <div style="position: relative; width: 100%; top: 1%;">
+	<img src="static/images/logo_white.svg" style="position: relative; z-index: 4; float:left; width:3%; left:.5%;"/>
+	<div class="button" id="about"    onclick="openAbout();"    style="float:right; width: 10%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>about</span></div>
+	<div class="button" id="projects" onclick="openProjects();" style="float:right; width: 12%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>projects</span></div>
+	<div class="button" id="resume"   onclick="openResume();"  style="float:right;  width: 11%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>resume</span></div>
+	<div class="button" id="home"     onclick="openHome();"     style="float:right; width: 8%;">  <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>home</span></div>
+      </div>
+
+      <div style="position: absolute; z-index:50; width: 99.5%; bottom: 1%;">
+	<a class="social" href="https://github.com/RetroDISTORT">
+	  <img class="socialImage" src="static/images/github.png" style="width:3vw; left:-10%; top:-10%" />
+	</a>
+	<a class="social" href="https://www.linkedin.com/in/daniel-garcia-rd/">
+	  <img class="socialImage" src="static/images/linkedin.png" style="width:2.5vw;" />
+	</a>
+	<a class="social" onclick="toClipboard('daniel95@rams.colostate.edu')">
+	  <img class="socialImage" src="static/images/mail.png" style="width:3.75vw; left:-25%; top:-25%" />
+	</a>
+      </div>
+      
+      <div class="info" id="info" style="visibility:hidden">
+	<!-- <div class="infoBackground"></div> -->
 	
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/python.png" style="height: 100%"/>
-	  <p class="techLogoText">python</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/c.png" style="height: 100%"/>
-	  <p class="techLogoText">c</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/cpp.png" style="height: 100%"/>
-	  <p class="techLogoText">c++</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/sql.png" style="height: 100%;"/>
-	  <p class="techLogoText" style="left:-60%">sql</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/bash.png" style="height: 100%"/>
-	  <p class="techLogoText">bash</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/css3.png" style="height: 100%"/>
-	  <p class="techLogoText">css3</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/hadoop.svg" style="height: 100%"/>
-	  <p class="techLogoText">hadoop</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/html5.png" style="height: 100%"/>
-	  <p class="techLogoText">html5</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/java.svg" style="height: 100%"/>
-	  <p class="techLogoText" style="left:-65%">java</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/javascript.svg" style="height: 100%"/>
-	  <p class="techLogoText">javascript</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/node.png" style="height: 100%"/>
-	  <p class="techLogoText">node</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/scala.png" style="height: 100%"/>
-	  <p class="techLogoText">scala</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/react.png" style="height: 100%"/>
-	  <p class="techLogoText">react</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/git.png" style="height: 100%"/>
-	  <p class="techLogoText">git</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/gamemaker.svg" style="height: 100%"/>
-	  <p class="techLogoText">game maker</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/autocad.svg" style="height: 100%"/>
-	  <p class="techLogoText">autocad</p>
-	</div>
-
-	<div class="techLogo" style="z-index: 4;">
-	  <img src="static/images/rust.png" style="height: 100%"/>
-	  <p class="techLogoText" style="left:-20%">rust</p>
+	<div id="infoResume" scroll="yes" style="position:relative; z-index: 4; top:6.75%; left:10%; width:90%; height:92.5%; visibility:hidden;">
+	  <!-- https://www.zamzar.com/convert/pdf-to-svg/ -->
+	  <a href="static/resume/resume.pdf" download="JoseDanielCarciaCarrilloResume" style="position:absolute; z-index:4; top:0%; right:0%; width:7.75vw; text-align:left; color:#EEE; font-size:1.5vw;"> Download </a>
+	  <div id="infoResume" scroll="yes" style="position:relative; z-index:4; width:100%; max-height:97.5%; top: -1vw; overflow:auto;">
+	    <img id="resumeFile"  src="static/resume/resume.svg"/>
+	  </div>
 	</div>
 	
-      </div>
-      
-      <div id="infoProjects" scroll="yes" style="position:absolute; z-index: 4; top:10%; left:10%; width:90%; height:85%; visibility:hidden; overflow-y:auto;">
-	<div class="project" style="background-image: url('/static/images/BooBot.png'); background-position: 60% 25%;">
+	<div id="infoAbout">
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/python.png"/>
+	    <p class="techLogoText">python</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/c.png" style="width: 4.5vw;"/>
+	    <p class="techLogoText">c</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/cpp.png"  style="width: 4.5vw;"/>
+	    <p class="techLogoText">c++</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/sql.png"  style="width: 4.5vw;" />
+	    <p class="techLogoText">sql</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/bash.png" style="width: 4.5vw;"/>
+	    <p class="techLogoText">bash</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/css3.png"/>
+	    <p class="techLogoText">css3</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/hadoop.svg"/>
+	    <p class="techLogoText">hadoop</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/html5.png"/>
+	    <p class="techLogoText">html5</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/java.svg"/>
+	    <p class="techLogoText">java</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/javascript.svg"/>
+	    <p class="techLogoText">javascript</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/node.png"/>
+	    <p class="techLogoText">node</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/scala.png"/>
+	    <p class="techLogoText">scala</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/react.png" style="width: 5.5vw;"/>
+	    <p class="techLogoText">react</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/git.png"/>
+	    <p class="techLogoText">git</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/gamemaker.svg"/>
+	    <p class="techLogoText">game maker</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/autocad.svg"/>
+	    <p class="techLogoText">autocad</p>
+	  </div>
+	  <div class="techLogo">
+	    <img class="techLogoImage" src="static/images/rust.png"  style="width: 5.5vw;"/>
+	    <p class="techLogoText">rust</p>
+	  </div>
+	</div>
+	
+	<div id="infoProjects" scroll="yes" style="position:absolute; z-index: 4; top:10%; left:10%; width:90%; height:85%; visibility:hidden; overflow-y:auto;">
+	  <div class="project" style="background-image: url('/static/images/BooBot.png'); background-position: 60% 25%;">
+	    
+	  </div>
+
+	  <div class="project" style="background-image: url('/static/images/Smartwatch.png'); background-position: 90% 25%;">
+	  </div>
+	  
+	  <div class="project" style="background-image: url('/static/images/DawnAndDusk.png'); background-position: 50% 25%;">
+	  </div>
 	  
 	</div>
-
-	<div class="project" style="background-image: url('/static/images/Smartwatch.png'); background-position: 90% 25%;">
-	</div>
-	
-	<div class="project" style="background-image: url('/static/images/DawnAndDusk.png'); background-position: 50% 25%;">
-	</div>
 	
       </div>
-      
     </div>
     
   </body>

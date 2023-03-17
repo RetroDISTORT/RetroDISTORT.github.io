@@ -30,7 +30,7 @@ function openProjects() {
 }
 
 function openHome() {
-    let scale  = (Math.min(screen.width/5, screen.height/8) ).toString() + '%';
+    let scale  = (Math.min(screen.width/5.1, screen.height/8) ).toString() + '%';
     console.log(screen.width/5, screen.height/5)
     document.getElementById('info').style.visibility = 'hidden'
     document.getElementById('infoResume').style.visibility = 'hidden'
