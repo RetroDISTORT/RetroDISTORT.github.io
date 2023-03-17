@@ -1,0 +1,199 @@
+html, body {
+    touch-action: none;
+    background: #000;
+    margin: 0;
+    height: 100%;
+}
+
+.button {
+    position: relative;
+    z-index: 4;
+    color: #777;
+    height: 3vw;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 1.5vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.button:hover {
+    color: #EEE;
+}
+
+.mesh {
+    z-index: 2;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: spin 30s infinite linear;
+    position: fixed;
+    left: 10%;
+    /*left:5.5% ;*/
+    top:59% ;
+}
+
+.mesh div {
+    line-height: 100px;
+    display: block;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.mesh div.base {
+    width:   0px;
+    height:  0px;
+    border-left: 87.5px solid transparent;
+    border-right: 87.5px solid transparent;
+    border-top: 300px solid rgba(150, 0, 50, .75);
+}
+
+.mesh div.mid {
+    width:   175px;
+    height:  175px;
+    clip-path: polygon(30% 0%, 71% 00%, 100% 100%, 0% 100%);
+    background: linear-gradient(rgba(150, 0, 150, .75), rgba(150, 0, 50, .75));
+}
+
+
+.mesh div.top {
+    width:   187px;
+    height:  187px;
+    clip-path: polygon(100% 50%, 85.35% 85.35%, 50% 100%, 14.65% 85.35%, 0% 50%, 14.65% 14.65%, 50% 0%, 85.35% 14.65%);
+    background: rgba(150, 0, 150, .75);
+}
+
+.mesh div.newPlane {
+    width:   100px;
+    height:  100px;
+    background: rgba(255, 255, 255, .5);
+    transform: rotateX(90deg) translateX(-50%);
+}
+
+.frameWhite {
+    z-index: 4;
+    position:     fixed;
+    top:          5%;
+    left:         5%;
+    width:        90%;
+    height:       90%;
+    border-style: solid;
+    border-width: 2;
+    border-color: rgba(200, 200, 200, 1);
+    /*background: linear-gradient(rgba(255, 255, 255, .15), rgba(255, 255, 255, .30));
+    /*background-image: url(data:image/png;base64,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);/**/
+    /**/
+}
+
+.border {
+    z-index: 3;
+    position: fixed;
+    background-color: #000;
+}
+
+.info {
+    position:     relative;
+    top:          5.5%;
+    left:         5.5%;
+    width:        80%;
+    height:       80%;
+}
+
+.infoBackground {
+    position:     relative;
+    z-index:      4;
+    top:          0%;
+    left:         0%;
+    width:        100%;
+    height:       100%;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, .05);
+}
+
+.social {
+    position: absolute;
+    z-index: 5;
+    color: #777;
+    font-family: "Courier New";
+    font-size: 3vw;
+    /*text-align: center;*/
+    cursor: pointer;
+}
+
+.social:hover {
+    color: #EEE;
+}
+
+.project {
+    display: inline-block;
+    z-index: 4;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 50%;
+    /*font-family: "Lucida Console", "Courier New", monospace;*/
+    background-image: url("/static/images/BooBot.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.project:hover {
+    filter: blur(10px);
+}
+
+.project:hover *{
+    filter: blur(10px);
+}
+
+#resumeFile {
+    display: inline-block;
+    position: relative;
+    width:100%;
+    justify-content: center;
+    filter:invert(1);
+    background: rgba(50, 50, 50, .1);
+}
+
+#infoAbout {
+    position: absolute;
+    z-index: 4;
+    top: 10%;
+    left: 10%;
+    width:90%;
+    height:90%;
+    color: #777;
+    overflow: auto;
+    /*font-family: "Lucida Console", "Courier New", monospace;*/
+    font-size: 5vw;
+    word-wrap: break-word;
+    /*text-align: center;*/
+}
+
+.techLogo {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    object-fit: fill;
+    float: left;
+    margin: 2%;
+}
+
+.techLogoText {
+    position: relative;
+    width: 200%;
+    bottom: 0%;
+    left:  -50%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: .8vw;
+    text-align: center;
+}
+
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotateX(-20deg) rotateY(0deg)}
+    50% {-webkit-transform: rotateX(0deg) rotateY(360deg)}
+    100% {-webkit-transform: rotateX(-20deg) rotateY(720deg)}/**/
+}

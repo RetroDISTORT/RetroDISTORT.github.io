@@ -1,0 +1,155 @@
+% -------------------------------------
+% PREAMBLE
+% -------------------------------------
+\documentclass[10pt,letterpaper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\moderncvicons{awesome}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace, relsize}
+\usepackage{verbatim}
+\usepackage[scale=0.75,margin=0.75in]{geometry}
+\usepackage{import}
+\usepackage[super]{nth}
+
+% underscores in this font look really bad
+\renewcommand{\_}{\textscale{.7}{\textunderscore}}
+
+% This is how the C++ spec typesets "C++"
+\newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.35ex}{\smaller{\smaller\textbf{+}}}}
+\newcommand{\Cpp}{\mbox{C\Rplus\Rplus}\xspace}
+
+% Used to add a second email / homepage, but preserve the ordering
+% If this wasn't done, homepage would be shown before email 2
+% Now they're right next to eachother
+\makeatletter
+\RenewDocumentCommand{\social}{O{}O{}m}{
+  \ifthenelse{\equal{#2}{}}
+    { 
+    \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.linkedin.com/in/#3}}}{}
+    \ifthenelse{\equal{#1}{email2}}  {\collectionadd[email2]{socials}  {\protect\emailsymbol\emaillink[#3]{#3}}}       {} % <= adding this
+    \ifthenelse{\equal{#1}{homepage}}{\collectionadd[homepage]{socials}{\protect\faGlobe\xspace\httplink[#3]{#3}}}     {} % <= adding this
+    \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[#3]{www.twitter.com/#3}}}    {}
+    \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[#3]{www.github.com/#3}}}     {}
+    %\ifthenelse{\equal{#1}{arch}}  {\collectionadd[arch]{socials}  {\protect\raisebox{-0.25mm}{\includegraphics[scale=0.215]{arch_logo.png}}\xspace\httplink[#3]{aur.archlinux.org/account/#3}}}{} % <= adding this
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
+\makeatother
+
+% -------------------------------------
+% CONTENT
+% -------------------------------------
+\name{Jose Daniel}{Garcia Carrillo}
+\phone[mobile]{+52 1 33 3409 9667}
+\email{daniel95@rams.colostate.edu}
+\social[github]{RetroDISTORT}
+\social[linkedin]{daniel-garcia-rd}
+\social[homepage]{retrodistort.github.io}
+
+\begin{document}
+\makecvtitle
+% -------------------------------------
+% SUMMARY
+% -------------------------------------
+%\vspace{-2em} % used to remove annoying vertical space under title
+%\small{Computer Science student at Colorado State University.\\
+%  Passionate in automation and design. Interested in machine learning, electronics, software engeneering, and AI.}
+%\vspace{-0.5em} % used to make last workaround look consistant
+% -------------------------------------
+% EDUCATION
+% -------------------------------------
+\vspace*{-1.25cm}
+\section{Education}
+\begin{itemize}
+\item{\cventry{Graduated May 2022}{B.S. Computer Science}{Colorado State University}{Fort Collins, CO}{}{
+    \begin{itemize}
+    \item \textbf{Relevant Coursework:}
+      Software Engineering, Machine Learning, Big Data, Object Oriented Design,
+      \\
+      Operating Systems, Algorithms and Optimization, Low-Level Programming, Compilers, Database,\\
+      Computer Architecture, Assembly
+    \end{itemize}
+}}
+
+\item{\cventry{Graduated May 2019}{Associates of Science}{Front Range Community College}{Fort Collins, CO}{}{}}
+  
+  \item{\cventry{Graduated May 2015}{Recognition as a Technologist in Automation and Instrumentation}{CETI Colomos}{Guadalajara, Jal}{}{
+    \begin{itemize}
+    \item \textbf{Relevant Coursework:}
+      Digital Circuits, Instrumentation, Technical Drawing, High Power Circuits, PLCs,\\
+      Microcontrollers, Pneumatics, Hydraulics, Process Controls, Industrial Robotics, Industrial Calibration,\\ Thermodynamic Processes
+    \end{itemize}
+}}
+\end{itemize}
+% -------------------------------------
+% TECHNICAL SKILLS
+% -------------------------------------
+\section{Technical Skills}
+\begin{itemize}
+\item \textbf{Programming Languages:}
+  \begin{itemize}
+    \item \makebox[3.5cm][l]{Procedural} Bash, \textbf{C}, Matlab, SQL
+    \item \makebox[3.5cm][l]{Object-Oriented} \textbf{\Cpp}, C\#, Java, \textbf{JavaScript}, Python, MicroPython, VB, Rust
+    \item \makebox[3.5cm][l]{Functional} Scala, Lisp, Elisp, \textbf{\LaTeX}
+  \end{itemize}
+\item \textbf{Libraries and Frameworks:} 
+  \begin{itemize}
+  \item \makebox[3.5cm][l]{Web Based} ReactJS, NodeJS
+  \end{itemize}
+\item \textbf{Mechatronics:} 
+  \begin{itemize}
+  \item \makebox[3.5cm][l]{Microcontrollers} Pic, Atmel, Xtensa, ARM 
+  \item \makebox[3.5cm][l]{PLC} Allen Bradley, Sismatic
+  \item \makebox[3.5cm][l]{Communication} SPI, CAN, I2C, I2S, BLE, WiFi, RS232, Sockets, Websockets, WebRTC
+  \item \makebox[3.5cm][l]{Other Skills} 3D printing, SMD soldering, Electronics Diagnostics, CNC Routing, Pneumatics, Hydraulics 
+  \end{itemize}
+\item \textbf{Software:} 
+  \begin{itemize}
+  \item \makebox[3.5cm][l]{Automation \& Design} FluidSIM, AutoCAD, RSLogix, EasyEDA 
+  \item \makebox[3.5cm][l]{Other} Unix-based OS, Emacs, Windows, Git
+  \end{itemize}
+\end{itemize}
+% -------------------------------------
+% WORK AND NOTABLE PROJECTS
+% -------------------------------------
+\section{Work Experience And Notable Projects}
+\begin{itemize}
+  
+\item{\cventry{Jan 2022 -- Jul 2022}{Colorado State University and Vaisala} %-- \$20/hr} % USAJOBS wants me to add a salary
+  {Hardware and Software Engineer | Research and Development}{Fort Collins, CO}{}{
+    \begin{itemize}
+    \item Undergraduate Electrical and Computer Engineer, Radar Data Acquisition Development and Design
+    \item Worked with GPS-synchronized broadband data acquisition system for earth science applications
+    \item Achieved to designed and develop the prototype for high speed data analysis with reduced design complexity
+    \end{itemize}
+}}
+
+\item{\cventry{\protect}{\protect\faGithub\xspace\httplink[Github.com/RetroDISTORT/Pi-Bot]{www.github.com/RetroDISTORT/Pi-Bot}}{Pi Bot}{v3.0.0 Released Aug 2022}{}{
+    \begin{itemize}
+    \item Designed a modular Raspberry Pi-based robot with machine learning capabilities through WebRTC (video/audio)
+    \item Includes capability for remote access through web-sockets or the mobile friendly web-app
+    \item Built with Python written applications such as web radio, music spectrum analyzer, Bluetooth speaker, and more
+    \end{itemize}
+}}
+  
+\item{\cventry{\protect}{\protect\faGithub\xspace\httplink[Github.com/RetroDISTORT/Dawn-and-Dust]{www.github.com/RetroDistort/Dawn-and-Dust}}{Dawn and Dust}{v2.1.0 Released Jun 2021}{}{
+    \begin{itemize}
+    \item Android game made with game maker studio using a version of C\#
+    \item Achieved to build a top-down-view puzzle game with google play integration
+    \end{itemize}
+}}
+  
+\item{\cventry{\protect}{\protect\faGithub\xspace\httplink[Github.com/RetroDISTORT/Smart-Watch]{www.github.com/RetroDISTORT/smart-Watch}}{Smart Watch}{v3.0.0 Released Jan 2021}{}{
+    \begin{itemize}
+    \item ESP32-based smartwatch for IoT, testing, home automation, mobile apps, and more
+    \item Designed from the bottom-up using C and micro python for the applications and AutoCAD for the case
+    \item Successfully built a working prototype from component selection and PCB design to coding applications
+    \end{itemize}
+}}  
+
+  
+\end{itemize}
+% for some reason, it's assumed that multiple pages exist
+% make this page look shorter so a '1/2' toast isn't visible
+\vspace*{-200cm}
+\end{document}
