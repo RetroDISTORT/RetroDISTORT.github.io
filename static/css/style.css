@@ -126,7 +126,8 @@ html, body {
 }
 
 .project {
-    display: inline-block;
+    /* display: inline-block; */
+    position: relative;
     z-index: 0;
     top: 0%;
     left: 0%;
@@ -139,7 +140,7 @@ html, body {
 }
 
 .projectBackground {
-    position: relative;
+    position: absolute;
     z-index: 0;
     top: 0%;
     left: 0%;
@@ -153,13 +154,18 @@ html, body {
 
 .projectDetails{
     visibility: hidden;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
 }
 
 .projectLinks {
     position: relative;
     float: right;
     z-index: 1;
-    top: -50%;
+    /* top: -50%; */
     left: 0%;
     width: 20%;
     height: 100%;
@@ -172,7 +178,7 @@ html, body {
     position: relative;
     z-index: 2;
     width: 30%;
-    top: -50%;
+    top: 0%;
     filter: invert(100%) drop-shadow(0px 0px 1mm black);
     margin: 1vw;
 }
@@ -181,7 +187,7 @@ html, body {
     position: relative;
     float: left;
     z-index: 1;
-    top: -100%;
+    top: -0%;
     left: 0%;
     width: 80%;
     height: 100%;
@@ -190,7 +196,6 @@ html, body {
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 1vw;
     word-wrap: break-word;
-    /* background: #FF0; */
 }
 
 .project:hover > .projectBackground{
