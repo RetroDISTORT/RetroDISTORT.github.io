@@ -237,12 +237,13 @@ html, body {
     z-index: 0;
     top: 10%;
     left: 10%;
-    width:90%;
+    /*width:90%;*/
+    max-width:90%;
     height:90%;
     color: #777;
-    overflow: auto;
+    overflow-Y: auto;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 5vw;
+    font-size: 1vw;
     word-wrap: break-word;
     /*text-align: center;*/
 }
