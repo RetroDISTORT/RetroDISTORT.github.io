@@ -6,6 +6,7 @@
     
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="shortcut icon" href="/static/icon/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     
     <script src="static/scripts/client.js"></script> 
     
@@ -43,11 +44,11 @@
       </div>
       
       <div style="position: relative; width: 100%; top: 1%;">
-	<img src="static/images/logo_white.svg" style="position: relative; z-index: 2; float:left; width:3%; left:.5%;"/>
-	<div class="button" id="about"    onclick="openAbout();"    style="float:right; width: 10%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>about</span></div>
-	<div class="button" id="projects" onclick="openProjects();" style="float:right; width: 12%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>projects</span></div>
-	<div class="button" id="resume"   onclick="openResume();"  style="float:right;  width: 11%;"> <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>resume</span></div>
-	<div class="button" id="home"     onclick="openHome();"     style="float:right; width: 8%;">  <span style="color: #777; font-size: 1.2vw;">&gt&gt</span><span>home</span></div>
+	<img src="static/images/logo_white.svg" style="position: relative; z-index: 2; float:left; width:3vmax; left:.5%;"/>
+	<div class="button" id="about"    onclick="openAbout();"    style="float:right; width: 5vmax;">  <span style="color: #777;">&gt&gt</span><span>about</span></div>
+	<div class="button" id="projects" onclick="openProjects();" style="float:right; width: 7vmax;">  <span style="color: #777;">&gt&gt</span><span>projects</span></div>
+	<div class="button" id="resume"   onclick="openResume();"   style="float:right; width: 6vmax;">  <span style="color: #777;">&gt&gt</span><span>resume</span></div>
+	<div class="button" id="home"     onclick="openHome();"     style="float:right; width: 5vmax">   <span style="color: #777;">&gt&gt</span><span>home</span></div>
       </div>
 
       <div style="position: absolute; z-index:2; width: 99.5%; bottom: 1%;">
@@ -57,7 +58,8 @@
 	<a class="social" href="https://www.linkedin.com/in/daniel-garcia-rd/" target="_blank">
 	  <img class="socialImage" src="static/images/linkedin.png" style="width:2.5vw;" />
 	</a>
-	<a class="social" onclick="toClipboard('daniel95@rams.colostate.edu')">
+	<!-- /*onclick="toClipboard('daniel95@rams.colostate.edu')"*/ -->
+	<a class="social" onclick="openPopup()">
 	  <img class="socialImage" src="static/images/mail.png" style="width:3.75vw; left:-25%; top:-25%" />
 	</a>
       </div>
@@ -73,10 +75,10 @@
 
 	<div id="infoProjects" scroll="yes" style="position:absolute; z-index: 0; top:10%; left:10%; width:90%; height:85%; visibility:hidden; overflow-y:auto;">
 
-	  <div class="project">
+	  <div class="project" tabindex="0">
 	    <div class="projectBackground" style="background-image: url('/static/images/BooBot.png'); background-position: 60% 25%;"></div>
 	    <div class="projectDetails">
-	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vw;">Pi-Bot</span><br> Modular robot based on the Raspberry Pi. Some of the applications I've written for it are Bluetooth speaker, RGB VU meter, RGB spectrum analyzer, remote control though WebRTC, and internet radio. The applications are written using C, C++, Python, and Bash.<br> The main technologies used for this project are the following:
+	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vmax;">Pi-Bot</span><br> Modular robot based on the Raspberry Pi. Some of the applications I've written for it are Bluetooth speaker, RGB VU meter, RGB spectrum analyzer, remote control though WebRTC, and internet radio. The applications are written using C, C++, Python, and Bash.<br> The main technologies used for this project are the following:
 		<ul>
 		  <li>Python</li>
 		  <li>Bash</li>
@@ -96,7 +98,7 @@
 		  <li>Back-End</li>
 		</ul>
 	      </div>
-	      <div class="projectLinks">
+	      <div class="projectLinks" tabindex="0">
 		<a href="https://github.com/RetroDISTORT/Pi-Bot" target="_blank" style="width:30%; height:30%; position:relative; margin: 1vw;">
 		  <img class="projectLinkButton" src="static/images/source.png">
 		</a>
@@ -104,10 +106,10 @@
 	    </div>
 	  </div>
 	  
-	  <div class="project">
+	  <div class="project" tabindex="0">
 	    <div class="projectBackground" style="background-image: url('/static/images/Smartwatch.png'); background-position: 90% 25%;"></div>
 	    <div class="projectDetails">
-	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vw;">I/ON32 Smartwatch</span><br> Modular watch based on Espressif's ESP32. Applications are loaded from the SD-Card and ran through Micropython. Some modules are written in C/C++ and precompiled python code for faster execution.<br> The main technologies used for this project are the following:
+	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vmax;">I/ON32 Smartwatch</span><br> Modular watch based on Espressif's ESP32. With large capacity for applications, users can make and eventually download apps. With the available SD-Card slot, users have up to 32gb of external storage available for applications, resouces, and other forms of media. Apps are developed hot loaded through Micropython. Some modules are written in C/C++ and precompiled python code for faster execution.<br> The main technologies used for this project are the following:
 		<ul>
 		  <li>Python</li>
 		  <li>Bash</li>
@@ -131,10 +133,10 @@
 	    </div>
 	  </div>
 	  
-	  <div class="project">
+	  <div class="project" tabindex="0">
 	    <div class="projectBackground" style="background-image: url('/static/images/DawnAndDusk.png'); background-position: 50% 25%;"></div>
 	    <div class="projectDetails">
-	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vw;">Dawn & Dusk</span><br> Top down puzzle Android/Windows/Web based game written using Game Maker Studio. Game Maker Studio games are written in GML, which includes aspects of Java, C++, and C#. The game at one point also included google playstore achivements. <br> The main technologies used for this project are the following:
+	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vmax;">Dawn & Dusk</span>(Beta) <br> Dawn & Dusk is a top down puzzle Android/Windows/Web based game written using Game Maker Studio. Challange yourself by collecting all the coins and solving puzzles before the time runs out. Want to play on your phone? The game includes a touch screen interface for mobile players. Dawn & Dusk was first released in 2016 on the Google Play store. The game is currently being optimised and the code refactored. With enough players, we can reintroduce the game to the google playstore with all it's achivements. <br> The main technologies used for this project are the following:
 		<ul>
 		  <li>GML (Game Maker Language)</li>
 		  <li>AdMob (in game ads)</li>
@@ -154,31 +156,55 @@
 	      </div>
 	    </div>
 	  </div>
+
+	  <div class="project" tabindex="0">
+	    <div class="projectBackground" style="background-image: url('/static/images/NeonNights.png'); background-position: 50% 50%;"></div>
+	    <div class="projectDetails">
+	      <div class="projectInfo"> <span style="color: #EEE; font-size: 2vmax;">Neon Nights</span> (Early Development) <br> Platformer game for Windows and HTML5 written using Game Maker Studio. This game is open for testing and feedback. Currently the game has physics mechanics like collision detection, collision prediction, wall jumping, and timed sprite animations. <br> The main technologies used for this project are the following:
+		<ul>
+		  <li>GML (Game Maker Language)</li>
+		  <li>2D Game Physics Design</li>
+		  <li>Level Design</li>
+		  <li>Sprite Design/Animation</li>
+		  <li>AI Programming</li>
+		  <li>UI Design</li>
+		</ul>
+	      </div>
+	      <div class="projectLinks">
+		<a href="https://github.com/RetroDISTORT/Neon-Nights" target="_blank" style="width:30%; height:30%; position:relative; margin: 1vw;">
+		  <img class="projectLinkButton" src="static/images/source.png">
+		</a>
+		<a href="https://retrodistort.github.io/Neon-Nights" target="_blank" style="width:30%; height:30%; position:relative; margin: 1vw;">
+		  <img class="projectLinkButton" src="static/images/play.png">
+		</a>
+	      </div>
+	    </div>
+	  </div>
 	  
 	</div>
 	
 	<div id="infoAbout">
-	  <div> <span style="color: #EEE; font-size: 3vw;">Hi, I'm Daniel Garcia! </span><br> I'm a passionate software and hardware designer. My journey started when I discovered GameMaker 8 when I was 13. Ever since then, I've programmed one project after another. Throughout college and my projects, I have had the privilege to discover many technologies and programming languages.
-	    <br><br><span style="color: #EEE; font-size: 2vw;">Some technologies I've worked with: </span>
+	  <div> <span style="color: #EEE; font-size: 3vmax;">Hi, I'm Daniel Garcia! </span><br> I'm a passionate software and hardware designer. My journey started when I discovered GameMaker 8 when I was 13. Ever since then, I've programmed one project after another. Throughout college and my projects, I have had the privilege to discover many technologies and programming languages.
+	    <br><br><span style="color: #EEE; font-size: 2vmax;">Some technologies I've worked with: </span>
 	  </div>
 	  <div class="techLogo">
 	    <img class="techLogoImage" src="static/images/python.png"/>
 	    <p class="techLogoText">python</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/c.png" style="width: 4.5vw;"/>
+	    <img class="techLogoImage" src="static/images/c.png" style="width: 4.5vmax;"/>
 	    <p class="techLogoText">c</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/cpp.png"  style="width: 4.5vw;"/>
+	    <img class="techLogoImage" src="static/images/cpp.png"  style="width: 4.5vmax;"/>
 	    <p class="techLogoText">c++</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/sql.png"  style="width: 4.5vw;" />
+	    <img class="techLogoImage" src="static/images/sql.png"  style="width: 4.5vmax;" />
 	    <p class="techLogoText">sql</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/bash.png" style="width: 4.5vw;"/>
+	    <img class="techLogoImage" src="static/images/bash.png" style="width: 4.5vmax;"/>
 	    <p class="techLogoText">bash</p>
 	  </div>
 	  <div class="techLogo">
@@ -210,7 +236,7 @@
 	    <p class="techLogoText">scala</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/react.png" style="width: 5.5vw;"/>
+	    <img class="techLogoImage" src="static/images/react.png" style="width: 5.5vmax;"/>
 	    <p class="techLogoText">react</p>
 	  </div>
 	  <div class="techLogo">
@@ -226,11 +252,41 @@
 	    <p class="techLogoText">autocad</p>
 	  </div>
 	  <div class="techLogo">
-	    <img class="techLogoImage" src="static/images/rust.png"  style="width: 5.5vw;"/>
+	    <img class="techLogoImage" src="static/images/rust.png"  style="width: 5.5vmax;"/>
 	    <p class="techLogoText">rust</p>
 	  </div>
 	</div>
 	
+      </div>
+
+      <div id="popup" class="popup">
+	<div id="popupBackground"> </div>
+	<div id="close" onclick="closePopup()"> <img id="closeButton" src="static/images/close.png" style="height:2vmax; filter:invert(50%);"/> </div>
+	<form action="https://formspree.io/f/mnqybvnk" method="POST">
+	  <div class="inputField" width="100%" id="name" style="align-items:center; justify-content:center;">
+	    <i class="bi bi-send" style="color: #AAA; padding: 1vmax;"></i>
+	    <p style="color: #AAA; font-family: 'Lucida Console', 'Courier New', monospace;">Message</p>
+	  </div>
+	  <div class="inputField" width="100%" id="name">
+	    <i class="bi bi-person" style="color: #AAA;"></i>
+	    <input class="inputBox" type="text" placeholder="Name" name="Name" style="border-bottom: 1px solid #777;">
+	  </div>
+	  <div class="inputField" id="phone">
+	    <i class="bi bi-telephone" style="color: #AAA;"> </i>
+	    <input class="inputBox" type="text" placeholder="Phone Number" name="Phone" style="border-bottom: 1px solid #777;">
+	  </div>
+	  <div class="inputField" id="email" type="email">
+	    <i class="bi bi-envelope" style="color: #AAA;"></i>
+	    <input class="inputBox" type="text" placeholder="Email Address" name="Email" style="border-bottom: 1px solid #777;">
+	  </div>
+	  <div class="inputField" id="message">
+	    <i class="bi bi-chat-right-dots" style="color: #AAA;"></i>
+	    <textarea class="inputBox" name="Message" placeholder="Message..." rows="10" style="border-bottom: 1px solid #777;"></textarea>
+	  </div>
+	  <div style="position:relative; left:25%; width:50%">
+	    <input id="submit" type="submit" value="Send" style="width:100%;">
+	  </div>
+	</form>
       </div>
       
     </div>

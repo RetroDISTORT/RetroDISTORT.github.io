@@ -5,7 +5,6 @@
   1 - buttons
   2 - flow buttons 
   3 - frame
-  
 */
 
 html, body {
@@ -15,6 +14,29 @@ html, body {
     height: 100%;
 }
 
+
+/* Page Frame */
+.frameWhite {
+    z-index: 3;
+    position:     fixed;
+    top:          5%;
+    left:         5%;
+    width:        90%;
+    height:       90%;
+    border-style: solid;
+    border-width: 2;
+    border-color: rgba(200, 200, 200, 1);
+    /*background: linear-gradient(rgba(255, 255, 255, .15), rgba(255, 255, 255, .30));/**/
+}
+
+.border {
+    z-index: 3;
+    position: fixed;
+    background-color: #000;
+}
+
+
+/* Scroll Bar (Chrome) */
 ::-webkit-scrollbar { /* width */
   width: 5px;
 }
@@ -33,13 +55,15 @@ html, body {
   background: #444; 
 }
 
+
+/* Navigation Bar*/
 .button {
     position: relative;
     z-index: 2;
     color: #777;
-    height: 3vw;
+    height: 3vmax;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 1.5vw;
+    font-size: 1vmax;
     text-align: center;
     cursor: pointer;
 }
@@ -48,6 +72,30 @@ html, body {
     color: #EEE;
 }
 
+
+/* Social media bar */
+.social {
+    position: relalative;
+    float: right;
+    width: 2.5vw;
+    height: 2.5vw;
+    z-index: 2;
+    cursor: pointer;
+    align-content: center;
+    margin: .5vmax;
+}
+
+.social:hover *{
+    filter: invert(100%);
+}
+
+.socialImage{
+    position:relative;
+    filter:invert(50%);
+}
+
+
+/* Dimond Mesh */
 .mesh {
     z-index: 0;
     -webkit-transform-style: preserve-3d;
@@ -96,25 +144,14 @@ html, body {
     transform: rotateX(90deg) translateX(-50%);
 }
 
-.frameWhite {
-    z-index: 3;
-    position:     fixed;
-    top:          5%;
-    left:         5%;
-    width:        90%;
-    height:       90%;
-    border-style: solid;
-    border-width: 2;
-    border-color: rgba(200, 200, 200, 1);
-    /*background: linear-gradient(rgba(255, 255, 255, .15), rgba(255, 255, 255, .30));/**/
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotateX(-20deg) rotateY(0deg)}
+    50% {-webkit-transform: rotateX(0deg) rotateY(360deg)}
+    100% {-webkit-transform: rotateX(-20deg) rotateY(720deg)}/**/
 }
 
-.border {
-    z-index: 3;
-    position: fixed;
-    background-color: #000;
-}
 
+/* Information frame (resume/projects/about) */
 .info {
     position:     relative;
     top:          5.5%;
@@ -123,26 +160,7 @@ html, body {
     height:       80%;
 }
 
-.social {
-    position: relalative;
-    float: right;
-    width: 2.5vw;
-    height: 2.5vw;
-    z-index: 2;
-    cursor: pointer;
-    align-content: center;
-    margin: .5vw;
-}
-
-.social:hover *{
-    filter: invert(100%);
-}
-
-.socialImage{
-    position:relative;
-    filter:invert(50%);
-}
-
+/**  Projects  **/
 .project {
     /* display: inline-block; */
     position: relative;
@@ -211,7 +229,7 @@ html, body {
     color: #CCC;
     overflow: auto;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 1vw;
+    font-size: 1vmax;
     word-wrap: break-word;
 }
 
@@ -223,6 +241,16 @@ html, body {
     visibility: visible;
 }
 
+.project:focus > .projectBackground{
+    filter: blur(10px) brightness(.5);
+}
+
+.project:focus > .projectDetails{
+    visibility: visible;
+}
+
+
+/**  Resume  **/
 #resumeFile {
     display: inline-block;
     position: relative;
@@ -232,6 +260,8 @@ html, body {
     background: rgba(50, 50, 50, .1);
 }
 
+
+/**  About  **/
 #infoAbout {
     position: absolute;
     z-index: 0;
@@ -243,7 +273,7 @@ html, body {
     color: #777;
     overflow-Y: auto;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 1vw;
+    font-size: 1vmax;
     word-wrap: break-word;
     /*text-align: center;*/
 }
@@ -251,8 +281,8 @@ html, body {
 .techLogo {
     z-index: 1;
     position: relative;
-    width: 5vw;
-    height: 6vw;
+    width: 5vmax;
+    height: 6vmax;
     object-fit: fill;
     float: left;
     margin: 2%;
@@ -260,8 +290,8 @@ html, body {
 }
 
 .techLogoImage{
-    height: 5vw;
-    width: 5vw;
+    height: 5vmax;
+    width: 5vmax;
 }
 
 .techLogoText {
@@ -270,14 +300,100 @@ html, body {
     bottom: 0%;
     left:  -50%;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 1vw;
+    font-size: 1vmax;
     text-align: center;
 }
 
-@-webkit-keyframes spin {
-    0% {-webkit-transform: rotateX(-20deg) rotateY(0deg)}
-    50% {-webkit-transform: rotateX(0deg) rotateY(360deg)}
-    100% {-webkit-transform: rotateX(-20deg) rotateY(720deg)}/**/
+/* Popup */
+.popup {
+    visibility:      hidden;
+    position:        absolute;
+    z-index:         1;
+    top:             10%;
+    left:            10%;
+    height:          80%;
+    width:           80%;
+    max-width:       80%;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    background:      rgba(0, 0, 0, 0);
+    /*filter: blur(10px) brightness(.5);*/
+    box-sizing:      border-box;
+    font-family:     "Lucida Console", "Courier New", monospace;
+}
+
+#popupBackground{
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    top:0%;
+    right:0%;
+    z-index: 0;
+    filter: blur(10px) brightness(1);
+    background: rgba(0,0,0, .9);
+    /*background: #FFF;*/
+}
+
+form {
+    position: relative;
+    z-index:         2;
+    height:       100%;
+    max-width:    100%;
+    padding :       1%;
+    font-size:   2vmax;
+    overflow-y:   auto;
+    /* overflow-x: hidden; */
+}
+
+form, input, textarea{
+    z-index:  2;
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: noone;
+    outline: none;
+}
+
+
+#close:hover closeButton{
+    filter:invert(80%);
+}
+
+#close{
+    position:     absolute;
+    z-index:      3;
+    top:          2%;
+    right:        10%;
+    height:       2vmax;
+    width:        2vmax;
+}
+
+.inputField{
+    padding-bottom: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.inputBox{
+    /*position: relative;*/
+    z-index:         2;
+    background: rgba(0, 0, 0, 0);
+    color: #CCC;
+}
+
+#submit{
+    z-index:         2;
+    width: 15%;
+    left: 25%;
+    border: none;
+    background: #333;
+    color: #CCC;
+    /*padding: 3% 0%;*/
+    border-radius: 25px;
+    border-bottom: none;
 }
 
 /*

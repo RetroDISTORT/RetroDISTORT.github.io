@@ -7,6 +7,15 @@ function openAbout() {
     document.getElementById('infoProjects').style.visibility = 'hidden'
     document.getElementById('meshFrame').style.visibility = 'hidden'
     document.getElementById('Title').style.visibility = 'hidden'
+    document.getElementById('popup').style.visibility = 'hidden'
+}
+
+function openPopup() {
+    document.getElementById('popup').style.visibility = 'visible'
+}
+
+function closePopup() {
+    document.getElementById('popup').style.visibility = 'hidden'
 }
 
 function openResume() {
@@ -17,6 +26,7 @@ function openResume() {
     document.getElementById('infoProjects').style.visibility = 'hidden'
     document.getElementById('meshFrame').style.visibility = 'hidden'
     document.getElementById('Title').style.visibility = 'hidden'
+    document.getElementById('popup').style.visibility = 'hidden'
 }
 
 function openProjects() {
@@ -27,6 +37,7 @@ function openProjects() {
     document.getElementById('infoAbout').style.visibility = 'hidden'
     document.getElementById('meshFrame').style.visibility = 'hidden'
     document.getElementById('Title').style.visibility = 'hidden'
+    document.getElementById('popup').style.visibility = 'hidden'
 }
 
 function openHome() {
@@ -38,6 +49,7 @@ function openHome() {
     document.getElementById('infoAbout').style.visibility = 'hidden'
     document.getElementById('meshFrame').style.visibility = 'visible'
     document.getElementById('Title').style.visibility = 'visible'
+    document.getElementById('popup').style.visibility = 'hidden'
 
     /*document.getElementById('mesh').setAttribute('style','transform:translateX(50%); -webkit-transform: rotate(90deg)') //etc*/
     document.getElementById('meshFrame').style.WebkitTransform = " scale3d(" + scale + "," + scale + "," + scale + ")";
